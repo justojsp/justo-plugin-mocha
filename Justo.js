@@ -1,8 +1,8 @@
 //imports
 const register = require("justo").register;
 const babel = require("justo-plugin-babel");
-const clean = require("justo-plugin-clean");
-const copy = require("justo-plugin-copy");
+const clean = require("justo-plugin-fs").clean;
+const copy = require("justo-plugin-fs").copy;
 const jshint = require("justo-plugin-jshint");
 
 //works
@@ -48,7 +48,8 @@ register({name: "build", desc: "Build the package."}, function() {
 register({name: "test", desc: "Unit test."}, {
   require: "justo-assert",
   src: [
-    "test/unit/lib/mocha.js"
+    "test/unit/lib/mocha.js",
+    "test/unit/lib/index.js"
   ]
 });
 
