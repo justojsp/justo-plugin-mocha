@@ -2,4 +2,4 @@
 "justo");exports["default"] = 
 
 
-(0, _justo.simple)({ ns: "org.justojs", name: "mocha" }, require("./mocha"));module.exports = exports["default"];
+(0, _justo.simple)({ ns: "org.justojs.plugin", name: "mocha" }, require("./lib/op"));module.exports = exports["default"];
