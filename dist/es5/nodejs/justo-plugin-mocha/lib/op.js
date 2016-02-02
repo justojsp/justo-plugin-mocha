@@ -1,11 +1,11 @@
-"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports["default"] = 
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
 
 
 
-op;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { "default": obj };}var _os = require("os");var _os2 = _interopRequireDefault(_os);var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function op(params) {
+op;var _os = require("os");var _os2 = _interopRequireDefault(_os);var _child_process = require("child_process");var _child_process2 = _interopRequireDefault(_child_process);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function op(params) {
   var cmd, args = [], res;
 
 
@@ -23,7 +23,7 @@ op;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { 
   if (!params.hasOwnProperty("colored")) params.colored = true;
 
 
-  if (/^win/.test(_os2["default"].platform())) cmd = "mocha.cmd";else 
+  if (/^win/.test(_os2.default.platform())) cmd = "mocha.cmd";else 
   cmd = "mocha";
 
   if (params.reporter) {
@@ -34,7 +34,7 @@ op;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { 
   if (params.requires) {var _iteratorNormalCompletion = true;var _didIteratorError = false;var _iteratorError = undefined;try {
       for (var _iterator = params.requires[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {var r = _step.value;
         args.push("-r");
-        args.push(r);}} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator["return"]) {_iterator["return"]();}} finally {if (_didIteratorError) {throw _iteratorError;}}}}
+        args.push(r);}} catch (err) {_didIteratorError = true;_iteratorError = err;} finally {try {if (!_iteratorNormalCompletion && _iterator.return) {_iterator.return();}} finally {if (_didIteratorError) {throw _iteratorError;}}}}
 
 
 
@@ -51,13 +51,13 @@ op;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { 
   if (params.sort) args.push("-S");
   if (params.colored) args.push("-c");
   if (params.checkLeaks) args.push("--check-leaks");var _iteratorNormalCompletion2 = true;var _didIteratorError2 = false;var _iteratorError2 = undefined;try {
-    for (var _iterator2 = params.files[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {var f = _step2.value;args.push(f);}} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2["return"]) {_iterator2["return"]();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}
+    for (var _iterator2 = params.files[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {var f = _step2.value;args.push(f);}} catch (err) {_didIteratorError2 = true;_iteratorError2 = err;} finally {try {if (!_iteratorNormalCompletion2 && _iterator2.return) {_iterator2.return();}} finally {if (_didIteratorError2) {throw _iteratorError2;}}}
 
 
-  res = _child_process2["default"].spawnSync(cmd, args);
+  res = _child_process2.default.spawnSync(cmd, args);
 
   if (params.output) console.log(res.stdout.toString());
   if (res.status) throw new Error(res.stderr.toString());
 
 
-  return res.status;}module.exports = exports["default"];
+  return res.status;}

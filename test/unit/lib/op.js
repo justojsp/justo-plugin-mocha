@@ -2,7 +2,7 @@
 const path = require("path");
 const suite = require("justo").suite;
 const test = require("justo").test;
-const mocha = require("../../../dist/es5/nodejs/justo-plugin-mocha/lib/op");
+const mocha = require("../../../dist/es5/nodejs/justo-plugin-mocha/lib/op").default;
 
 //suite
 suite("#mocha()", function() {

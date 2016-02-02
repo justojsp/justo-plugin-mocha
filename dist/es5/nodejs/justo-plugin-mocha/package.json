@@ -1,10 +1,10 @@
 {
   "name": "justo-plugin-mocha",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple task to run mocha.",
   "homepage": "http://www.justojs.org",
   "author": {
-    "name": "JustoLabs",
+    "name": "Justo Labs",
     "email": "justojs@justolabs.com",
     "url": "http://www.justojs.org"
   },
@@ -49,6 +49,5 @@
   ],
   "scripts": {
     "test": "justo test"
-  },
-  "license": "MIT"
+  }
 }
